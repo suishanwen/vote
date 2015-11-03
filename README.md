@@ -1,2 +1,2 @@
 # vote
-voteBackgroundManageSystem By Intellij Idea
+voteBackgroundManageSystem By Intellij Idea <br>
