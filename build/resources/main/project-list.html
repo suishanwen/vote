@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="projectApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>项目列表</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <style>
+        .selected{
+            background-color: LightGrey ;
+        }
+    </style>
+</head>
+<body id="loginUser" ng-controller="ProjectListController">
+    <div class="control-panel" align="center" ng-show="loginUserState!='1'">
+        <button class="btn btn-default" ng-click="addNewProject()">新增</button>
+        <button class="btn btn-primary" ng-click="editProjectFun()">编辑</button>
+        <button class="btn btn-danger" ng-click = "delProject()">删除</button>
+    </div>
+    <form class="navbar-form navbar-left" role="search" align="center">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search" ng-model="searchText.projectName"/>
+        </div>
+    </form>
+    <table class="table">
+        <tr>
+            <td>项目名称</td>
+            <td>管理员</td>
+            <td>状态</td>
+        </tr>
+        <tr ng-repeat="project in projectList|filter:searchText" ng-click="selectedProjectFun(project)" ng-class="{'selected':project.projectId===selectedProject.projectId}">
+            <td>{{project.projectName}}</td>
+            <td>{{project.admin}}</td>
+            <td>{{project.state==1?'启用':'停用'}}</td>
+        </tr>
+    </table>
+    <div ng-show="selectedProject!=null&&selectedProject.state>0">
+        <table class="table" style="background: lightgrey">
+            <tr>
+                <td>项目名</td>
+                <td>当前后台</td>
+                <td>总需求</td>
+                <td>已完成</td>
+                <td>限制人数</td>
+                <td>参与人数</td>
+                <td>操作</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>{{selectedProjectInfoVo.projectName}}</td>
+                <td>{{selectedProjectInfoVo.backgroundNo}}</td>
+                <td><input type="text" style="width: 80px" id="totalRequirement" ng-model="selectedProjectInfoVo.totalRequirement" readonly/></td>
+                <td>{{selectedProjectInfoVo.finishNum}}</td>
+                <td><input type="text" style="width: 80px" id="limitWorker" ng-model="selectedProjectInfoVo.limitWorker"readonly /></td>
+                <td>{{selectedProjectInfoVo.activeParticipate}}({{selectedProjectInfoVo.participate}})</td>
+                <td>{{flag==1?'编辑->':''}}{{flag==2?'转移->':''}} <button class="btn btn-danger" ng-click="confirmEdit()" ng-show="showConfirm">确定</button> <button class="btn btn-default" ng-click="cancel()" ng-show="showCancel">取消</button><button class="btn btn-primary" ng-click="editSelectedProjectInfoVo()" ng-show="showEdit">编辑</button> <button class="btn btn-primary" ng-click="moveBackground()" ng-show="showMove">转移</button></td>
+                <td><a href="{{backgroundUrl}}" target="_blank" ng-show="selectedProjectInfoVo.backgroundNo!=null">后台</a></td>
+            </tr>
+            <tr ng-show="selectedProjectInfoVo.backgroundNo!=null" >
+                <td colspan="8"><input type="text" style="width: 90%;" id="notice" ng-model="selectedProjectInfoVo.notice"  placeholder="公告" readonly/></td>
+            </tr>
+        </table>
+    </div>
+    <div class="hide"  modal = "addModal" close="addModal=false" options="modalOpt">
+        <div class="modal-header">
+            <button class="close"  ng-click="addModal=false">x</button>
+            <h5>新增项目</h5>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="addProjectName" ng-model="newProject.projectName" placeholder="项目名称"/><br/>
+            <input type="text" ng-model="newProject.admin" placeholder="管理员用户名"/><br/>
+            <input type="radio" ng-model="newProject.state" name="status" value="0"/>停用
+            <input type="radio" ng-model="newProject.state" name="status" value="1"/>启用
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="initNewProject()">重置</button>
+            <button class="btn btn-primary" ng-click="addProject()">确定</button>
+        </div>
+    </div>
+    <div class="hide"  modal = "editModal" close="editModal=false" options="modalOpt">
+        <div class="modal-header">
+            <button class="close"  ng-click="editModal=false">x</button>
+            <h5>编辑项目</h5>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="editProjectName" ng-model="selectedProject.projectName" placeholder="项目名称"/><br/>
+            <input type="text" ng-model="selectedProject.admin" placeholder="管理员用户名"/><br/>
+            <input type="radio" ng-model="selectedProject.state" name="status" value="0"/>停用
+            <input type="radio" ng-model="selectedProject.state" name="status" value="1"/>启用
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="editProject()">确定</button>
+        </div>
+    </div>
+
+    <script src="assets/js/angular.js"></script>
+    <script src="assets/js/wiki-common.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/ui-bootstrap-tpls.js"></script>
+    <script src="js/project-list-controller.js"></script>
+</body>
+</html>

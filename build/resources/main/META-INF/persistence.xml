@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <!-- persistence.xml需要放到Classpath下面 -->
+    <persistence-unit name="domain" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <!-- 用户 -->
+        <class>com.vote.domain.entity.Background</class>
+        <class>com.vote.domain.entity.BackgroundOld</class>
+        <class>com.vote.domain.entity.Project</class>
+        <class>com.vote.domain.entity.Admin</class>
+        <class>com.vote.domain.entity.Record</class>
+
+        <!-- 提供商——Hibernate -->
+        <properties>
+
+        </properties>
+    </persistence-unit>
+</persistence>
