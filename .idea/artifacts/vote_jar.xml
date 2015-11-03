@@ -1,0 +1,47 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="vote:jar">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/vote_jar</output-path>
+    <root id="archive" name="vote.jar">
+      <element id="module-output" name="vote" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/4.0.1.Final/78bcf608d997d0529be2f4f781fdc89e801c9e88/hibernate-commons-annotations-4.0.1.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-guava/2.1.1/8f687eb5a9c1a2d9993e4c76c97b4307fcb47974/jackson-datatype-guava-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.0.0.M3/7c3b67bfebe0db48a79d3258d512213aefec0b20/jetty-server-9.0.0.M3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/4.1.7.Final/4378f4f459afbebffbe8bf7e4524d76045e4f5d6/hibernate-entitymanager-4.1.7.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.1.1/4045ee142c3ceef928976ed8f17b909d225ad789/jackson-jaxrs-json-provider-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.oracle/ojdbc6/11.2.0.1.0/5b371965872f89ed74702ceec901b12f0074081e/ojdbc6-11.2.0.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/aaaa85845fb5c59da00193f06b8e5278d8bf3f8/javax.servlet-3.0.0.v201112011016.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.1/82ad1c5f92f6dcc6291f5c46ebacb975eaa844de/jackson-core-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.sonatype.sisu.inject/cglib/2.2.1-v20090111/7ce5e983fd0e6c78346f4c9cbfa39d83049dda2/cglib-2.2.1-v20090111.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject/guice/3.0/9d84f15fe35e2c716a02979fb62f50a29f38aefa/guice-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/9.0.0.M3/2626293dd0601fca6480aa0a5f1ce05e2f976319/jetty-security-9.0.0.M3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/3306a165afa81938fc3d8a0948e891de9f6b192b/hibernate-jpa-2.0-api-1.0.1.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.0.0.M3/839160a15eea7ed8ef9f148b379ea441b2414818/jetty-util-9.0.0.M3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.0.0.M3/4cfdd6cf6c09565b2cb40e630d26e0e44589ea74/jetty-io-9.0.0.M3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.1.0.GA/c71f2856e7b60efe485db39b37a31811e6c84365/jboss-logging-3.1.0.GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.1.1/a1a3d3de55129f1d9d1588b102ae27746df8f4b6/jackson-module-jaxb-annotations-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.spec.javax.transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/2ab6236535e085d86f37fd97ddfdd35c88c1a419/jboss-transaction-api_1.1_spec-1.0.0.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/9.0.0.M3/3c947a9198c76b9d555230c638122ca724504606/jetty-http-9.0.0.M3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/4.1.7.Final/5a43c3fec4b8a9b3d97d76606377a7ccca967778/hibernate-core-4.1.7.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/13.0.1/d6f22b1e60a2f1ef99e22c9f5fde270b2088365/guava-13.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-server/1.17.1/c5aa1109d50d11e3f0dca3af7ba94448255443e2/jersey-server-1.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-servlet/3.0/610cde0e8da5a8b7d8efb8f0b8987466ffebaaf9/guice-servlet-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/9.0.0.M3/6fad8b4c89f76b6f8470e4295232daaf11250755/jetty-servlet-9.0.0.M3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/asm/asm/3.1/c157def142714c544bdea2e6144645702adf7097/asm-3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.15.0-GA/79907309ca4bb4e5e51d4086cc4179b2611358d7/javassist-3.15.0-GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.1.1/38d2b3c0c89af5b937fd98c3e558bf6b58c14aa2/jackson-databind-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-persist/3.0/61e6ff3713cb29b01dc0ae6942e3646a794ffbb0/guice-persist-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-throwingproviders/3.0/3e87a2702e175b7ae88a425f2ccdc98808725942/guice-throwingproviders-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-core/1.17.1/7f73259ad9cf7be225f2a42bd4fe72f34ff9b65c/jersey-core-1.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-multibindings/3.0/5e670615a927571234df68a8b1fe1a16272be555/guice-multibindings-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-servlet/1.17.1/36097a2966e9b989fbca6f7f579def99a91b29ad/jersey-servlet-1.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.jersey.contribs/jersey-guice/1.17.1/4a98a4093c9ed94428894292f57136bde9160b7b/jersey-guice-1.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.inject.extensions/guice-assistedinject/3.0/544449ddb19f088dcde44f055d30a08835a954a7/guice-assistedinject-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.1.1/3922d45de7f3ccabe8f16aad4060a6394373c6cb/jackson-dataformat-yaml-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.1.1/b01cc83e745fc4425a3968fafbf8e5b8254a6dd/jackson-annotations-2.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
