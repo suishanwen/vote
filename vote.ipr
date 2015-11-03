@@ -21,6 +21,7 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/assets/intro/intro1.bmp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/assets/intro/intro1.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/assets/intro/intro2.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/assets/intro/intro3.png" charset="UTF-8" />
