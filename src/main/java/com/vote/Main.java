@@ -36,7 +36,7 @@ public class Main {
         servletHandler.setContextPath("/");
         servletHandler.addServlet(new ServletHolder(new InvalidRequestServlet()), "/*");
         FilterHolder guiceFilter = new FilterHolder(injector.getInstance(GuiceFilter.class));
-        FilterHolder guiceFilter2 = new FilterHolder(injector.getInstance(HerenCorsFilter.class));
+        FilterHolder guiceFilter2 = new FilterHolder(injector.getInstance(CorsFilter.class));
         servletHandler.addFilter(guiceFilter, "/*", EnumSet.allOf(DispatcherType.class));
         servletHandler.addFilter(guiceFilter2, "/*", EnumSet.allOf(DispatcherType.class));
         ResourceHandler resourceHandler = new ResourceHandler();

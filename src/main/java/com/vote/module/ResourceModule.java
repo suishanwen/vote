@@ -3,14 +3,11 @@ package com.vote.module;
 
 import com.google.inject.Singleton;
 import com.google.inject.servlet.GuiceFilter;
-import com.vote.HerenCorsFilter;
+import com.vote.CorsFilter;
 import com.vote.api.AdminResource;
 import com.vote.api.BackgroundResource;
 import com.vote.api.ProjectResource;
 import com.vote.api.RecordResource;
-import com.vote.domain.entity.Background;
-import com.vote.domain.entity.BackgroundOld;
-import com.vote.domain.entity.Record;
 import com.vote.domain.facade.AdminFacade;
 import com.vote.domain.facade.BackgroundFacade;
 import com.vote.domain.facade.ProjectFacade;
@@ -40,10 +37,10 @@ public class ResourceModule extends JerseyServletModule {
         bind(AdminResource.class);
         bind(RecordResource.class);
         bind(BackgroundResource.class);
-        bind(HerenCorsFilter.class).in(Singleton.class);
+        bind(CorsFilter.class).in(Singleton.class);
         Map<String, String> params = new HashMap<String, String>();
         params.put(PROPERTY_PACKAGES, "com.vote.api.*");
-        filter("/api").through(HerenCorsFilter.class);
+        filter("/api").through(CorsFilter.class);
         serve("/api/*").with(GuiceContainer.class, params);
     }
 }
