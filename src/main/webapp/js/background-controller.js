@@ -1,5 +1,5 @@
 var backgroundApp = angular.module('backgroundApp', ['ui.bootstrap', 'wiki.common']);
-backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$timeout", function ($scope, Path, $http, $timeout, $location, voteService) {
+backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$timeout","$q", function ($scope, Path, $http, $timeout,$q, $location, voteService) {
     $scope.projectName = getQueryString(window.location.search, "projectName");
     $scope.historyBackground = "";
     function getQueryString(queryString, name) {
@@ -19,6 +19,8 @@ backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$t
                 for (var i = 101; i < $scope.BackgroundVo.backgroundNo; i++) {
                     $scope.historyBackground = $scope.historyBackground + " <a href=\'background-history.html?projectName=" + $scope.projectName + "&backgroundNo=" + i + "\'>" + i + "</a>"
                 }
+            }else{
+                $scope.countLoad=20;
             }
             $timeout(function(){
                 $scope.search={workerId:""}
@@ -55,16 +57,25 @@ backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$t
         $scope.BackgroundVo.participate = participate;
         $scope.BackgroundVo.activeParticipate = activeParticipate;
         $scope.BackgroundVo.finishNum = finishNum;
+    };
+    $scope.countLoad=0;
+    $scope.checkLoadOver=function(element){
+        if($scope.historyBackground||$scope.countLoad==20){
+            element.append($scope.historyBackground)
+        }else{
+            $timeout(function(){
+                $scope.countLoad++;
+                $scope.checkLoadOver(element)
+            },1000);
+        }
     }
 }]);
-backgroundApp.directive('historyBackground', function ($timeout) {
+backgroundApp.directive('historyBackground', function ($q) {
     return {
         restrict: 'E',
         template: '<span class=\"app-content\">历史后台:</span>',
         link: function (scope, element, attrs) {
-            $timeout(function () {
-                element.append(scope.historyBackground);
-            }, 100);
+            scope.checkLoadOver(element);
         }
     }
 });
