@@ -72,7 +72,7 @@ var ProjectListController=function($scope,Path,$http,$timeout,$location,voteServ
         $http.post(url, project.projectName).success(function (data) {
             if(data){
                 $scope.selectedProjectInfoVo=data;
-                $scope.backgroundUrl=Path.getUri("background.html?projectName="+data.projectName);
+                $scope.backgroundUrl=Path.getUri("app/background.html?projectName="+data.projectName);
                 setButton(false,false,true,true,0);
             }else{
                 $scope.selectedProjectInfoVo={

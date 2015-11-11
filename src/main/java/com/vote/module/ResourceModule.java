@@ -1,3 +1,4 @@
+/*
 package com.vote.module;
 
 
@@ -41,6 +42,8 @@ public class ResourceModule extends JerseyServletModule {
         Map<String, String> params = new HashMap<String, String>();
         params.put(PROPERTY_PACKAGES, "com.vote.api.*");
         filter("/api").through(CorsFilter.class);
-        serve("/api/*").with(GuiceContainer.class, params);
+        serve("/api*/
+/*").with(GuiceContainer.class, params);
     }
 }
+*/

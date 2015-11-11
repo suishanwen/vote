@@ -1,3 +1,4 @@
+/*
 package com.vote.module;
 
 
@@ -21,7 +22,8 @@ public class DbModule extends AbstractModule {
         install(new ServletModule() {
             @Override
             protected void configureServlets() {
-                filter("/api/*").through(PersistFilter.class);
+                filter("/api*/
+/*").through(PersistFilter.class);
             }
         });
 
@@ -44,3 +46,4 @@ public class DbModule extends AbstractModule {
     }
 
 }
+*/

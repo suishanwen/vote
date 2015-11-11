@@ -22,8 +22,8 @@ group = 'com.vote'
 version = '0.1.0'
 
 project.ext {
-
-    jettyVersion = '9.0.0.M3'
+    i0Version = '2.0.12-SNAPSHOT'
+    /*jettyVersion = '9.0.0.M3'
     jerseyVersion = '1.17.1'
     jacksonVersion = '2.1.1'
     guavaVersion = '13.0.1'
@@ -32,7 +32,7 @@ project.ext {
     hibernate = '4.3.0.Final'
 
     mockitoVersion = '1.9.5'
-    junitVersion = '4.11'
+    junitVersion = '4.11'*/
     
 }
 
@@ -47,7 +47,8 @@ repositories {
 }
 
 dependencies {
-    compile "org.eclipse.jetty:jetty-server:$jettyVersion"
+    compile "com.heren.i0:i0-grizzly:$i0Version"
+    /*compile "org.eclipse.jetty:jetty-server:$jettyVersion"
     compile "org.eclipse.jetty:jetty-servlet:$jettyVersion"
 
 
@@ -79,7 +80,7 @@ dependencies {
 
     testCompile "junit:junit:$junitVersion"
     testCompile "org.mockito:mockito-all:$mockitoVersion"
-
+*/
 
 }
 
@@ -94,7 +95,7 @@ sourceSets {
 fatJar {
     baseName = 'vote'
     manifest {
-        attributes 'Main-Class': 'com.vote.Main'
+        attributes 'Main-Class': 'com.vote.LauncherStart'
     }
     exclude 'META-INF/MANIFEST.MF', '**/*.RSA', '**/*.SF', '**/*.DSA'
 	exclude "about_files/*"
