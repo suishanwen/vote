@@ -48,6 +48,8 @@ repositories {
 
 dependencies {
     compile "com.heren.i0:i0-grizzly:$i0Version"
+
+    compile 'mysql:mysql-connector-java:5.1.6'
     /*compile "org.eclipse.jetty:jetty-server:$jettyVersion"
     compile "org.eclipse.jetty:jetty-servlet:$jettyVersion"
 

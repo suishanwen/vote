@@ -27,13 +27,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: com.oracle:ojdbc6:11.2.0.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
-    <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Gradle: dom4j:dom4j:1.6.1" level="project" />
-    <orderEntry type="library" name="Gradle: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.6" level="project" />
     <orderEntry type="library" name="Gradle: com.heren.i0:i0-grizzly:2.0.12-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Gradle: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:guava:19.0-rc1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.inject.extensions:guice-servlet:4.0" level="project" />
@@ -51,6 +48,7 @@
     <orderEntry type="library" name="Gradle: javax.websocket:javax.websocket-api:1.1" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.tyrus:tyrus-core:1.11" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.gmbal:gmbal:4.0.0-b001" level="project" />
+    <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml:classmate:0.8.0" level="project" />
     <orderEntry type="library" name="Gradle: com.heren.i0:i0-core:2.0.12-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.17" level="project" />
@@ -59,6 +57,7 @@
     <orderEntry type="library" name="Gradle: com.squarespace.jersey2-guice:jersey2-guice:0.10" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-grizzly2-servlet:2.17" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.media:jersey-media-multipart:2.17" level="project" />
+    <orderEntry type="library" name="Gradle: com.oracle:ojdbc6:11.2.0.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.inject.extensions:guice-persist:4.0" level="project" />
     <orderEntry type="library" name="Gradle: com.googlecode.flyway:flyway-core:2.3.1" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-entitymanager:5.0.1.Final" level="project" />
@@ -85,6 +84,7 @@
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.core:jersey-server:2.17" level="project" />
     <orderEntry type="library" name="Gradle: javax.ws.rs:javax.ws.rs-api:2.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2.external:javax.inject:2.4.0-b10" level="project" />
+    <orderEntry type="library" name="Gradle: dom4j:dom4j:1.6.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.inject.extensions:guice-multibindings:4.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jvnet.mimepull:mimepull:1.9.3" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-core:5.0.1.Final" level="project" />
@@ -104,6 +104,7 @@
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.core:jersey-client:2.17" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.media:jersey-media-jaxb:2.17" level="project" />
     <orderEntry type="library" name="Gradle: xml-apis:xml-apis:1.0.b2" level="project" />
+    <orderEntry type="library" name="Gradle: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Gradle: org.jboss:jandex:1.2.2.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2:hk2-utils:2.4.0-b10" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b10" level="project" />

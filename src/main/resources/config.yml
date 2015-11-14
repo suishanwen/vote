@@ -1,8 +1,8 @@
 database:
-    driver: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521:orcl
-    user: vote
-    password: vote
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/vote
+    user: root
+    password: root
     properties:
         hibernate.c3p0.max_size: 5
         hibernate.c3p0.min_size: 1
@@ -11,7 +11,7 @@ database:
         hibernate.c3p0.acquire_increment: 5
         hibernate.c3p0.idle_test_period: 60
         hibernate.show_sql: true
-
+        hibernate.hbm2ddl.auto: update
 http:
     port: 8888
 logging:

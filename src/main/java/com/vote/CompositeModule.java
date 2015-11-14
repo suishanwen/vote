@@ -80,7 +80,7 @@ public class CompositeModule extends ApplicationModule<JpaConfiguration> {
             logger.error(e.getMessage(), e);
         }
         if (jpaConfiguration == null) {
-            jpaConfiguration = defaultConfiguration();
+            jpaConfiguration = mysqlConfiguration();
         }
         return jpaConfiguration;
     }
@@ -112,5 +112,16 @@ public class CompositeModule extends ApplicationModule<JpaConfiguration> {
                 database().user("vote").password("vote").driver("oracle.jdbc.driver.OracleDriver")
                         .url("jdbc:oracle:thin:@localhost:1521:orcl")
                         .with(Hibernate.showSql, Hibernate.dialect("Oracle10g")).build());
+    }
+
+    private static JpaConfiguration mysqlConfiguration() {
+        if (logger.isInfoEnabled())
+            logger.info("No configuration found, will use mysql configuration.");
+
+        return new JpaConfiguration(config().http().port(8888).end()
+                .logging().level(LogLevel.INFO).console().end().end().build(),
+                database().user("root").password("root").driver("com.mysql.jdbc.Driver")
+                        .url("jdbc:mysql://127.0.0.1:3306/vote")
+                        .build());
     }
 }
