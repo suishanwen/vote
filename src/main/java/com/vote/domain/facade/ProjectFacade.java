@@ -50,7 +50,7 @@ public class ProjectFacade extends BaseFacade{
 
     public List<Project> getProjectByAdmin(String admin){
         String sql="select p from Project p ";
-        if(!admin.equals("suishanwen")){
+        if(!admin.equals("root")){
             sql=sql+"where p.admin=\'"+admin+"\'";
         }
         return entityManager.createQuery(sql).getResultList();

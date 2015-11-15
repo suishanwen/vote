@@ -5,10 +5,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-@SequenceGenerator(name = "SEQ_Background",allocationSize=1,initialValue=1, sequenceName = "SEQUENCE_Background")
 public class Background {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator ="SEQ_Background")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer backgroundId;
     private String projectName;
     private Integer backgroundNo;

@@ -6,10 +6,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-@SequenceGenerator(name = "SEQ_Admin",allocationSize=1,initialValue=1, sequenceName = "SEQUENCE_Admin")
 public class Admin {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator ="SEQ_Admin")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer adminId;
     private String admin;
     private String password;

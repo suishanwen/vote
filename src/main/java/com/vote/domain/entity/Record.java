@@ -6,10 +6,9 @@ import java.util.Date;
 
 @Entity
 @XmlRootElement
-@SequenceGenerator(name = "SEQ_Record",allocationSize=1,initialValue=1, sequenceName = "SEQUENCE_Record")
 public class Record {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator ="SEQ_Record")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long recordId;
     private String projectName;
     private String workerId;

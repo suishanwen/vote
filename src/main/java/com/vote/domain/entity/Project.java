@@ -5,10 +5,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-@SequenceGenerator(name = "SEQ_Project",allocationSize=1,initialValue=1, sequenceName = "SEQUENCE_Project")
 public class Project {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator ="SEQ_Project")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="project_id")
     private Integer projectId;
     @Column(unique = true)
