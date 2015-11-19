@@ -35,11 +35,11 @@ import static com.heren.i0.jpa.DatabaseConfiguration.database;
                 @EmbeddedGrizzly.Asset(uri = "/assets", resource = "assets"),
                 @EmbeddedGrizzly.Asset(uri = "/css", resource = "css"),
                 @EmbeddedGrizzly.Asset(uri = "/js", resource = "js")
-        },
+        }/*,
         mimeExtensions = {@EmbeddedGrizzly.MimeExtension(extension = "eot", mime = "application/vnd.ms-fontobject"),
                 @EmbeddedGrizzly.MimeExtension(extension = "ttf", mime = "application/x-font-opentype"),
                 @EmbeddedGrizzly.MimeExtension(extension = "otf", mime = "application/x-font-opentype"),
-                @EmbeddedGrizzly.MimeExtension(extension = "woff", mime = "application/x-font-woff")}
+                @EmbeddedGrizzly.MimeExtension(extension = "woff", mime = "application/x-font-woff")}*/
 )
 /*@WebSocket*/
 /*@DefaultTimeZone("Asia/Shanghai")*/
