@@ -4,45 +4,42 @@
     <meta charset="UTF-8">
     <title>实时后台</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.css"/>
-    <style>
-        *{ margin:0 auto; padding:0 auto; text-align:center;}
-        .notice{font-size:20px;color: brown}
-        .online{
-            background: yellowgreen ;
-        }
-        thead { border:1px solid #aaa}
-        tbody { border: hidden;font-size: 10px;}
-        tfoot { border:1px solid #aaa}
-    </style>
+    <link rel="stylesheet" href="../css/index.css"/>
 </head>
 <body  ng-controller="BackgroundController">
-<div class="notice">{{BackgroundVo.notice}}</div>
+<div class="notice"><span ng-bind="BackgroundVo.notice"></span></div>
 <div>
-        项目名:{{projectName}}
-        总需求量:{{BackgroundVo.totalRequirement}}
-        已完成量:{{BackgroundVo.finishNum}}
-        限制人数：{{BackgroundVo.limitWorker}}
-        参与人数：{{BackgroundVo.participate}}
-        当前后台:{{BackgroundVo.backgroundNo}}
+        项目名:<span ng-bind="projectName"></span>
+        总需求量:<span ng-bind="BackgroundVo.totalRequirement"></span>
+        已完成量:<span ng-bind="BackgroundVo.finishNum"></span>
+        限制人数:<span ng-bind="BackgroundVo.limitWorker"></span>
+        参与人数:<span ng-bind="BackgroundVo.participate"></span>
+        当前后台:<span ng-bind="BackgroundVo.backgroundNo"></span>
         <history-background></history-background>
         <input type="text" placeholder="查询工号" ng-model="search.workerId">
 </div>
 <div>
     <table class="table">
         <thead>
-            <td>工号</td>
-            <td>项目名</td>
-            <td>成功数量</td>
-            <td>更新时间</td>
+            <tr>
+                <td>工号</td>
+                <td>项目名</td>
+                <td>成功数量</td>
+                <td>更新时间</td>
+            </tr>
         </thead>
-        <tbody ng-repeat="record in BackgroundVo.recordVoList|filter:search" ng-class="{'online':record.onLine}">
-            <td>{{record.workerId}}</td>
-            <td>{{record.projectName}}</td>
-            <td>{{record.succNum}}</td>
-            <td>{{record.uploadTime|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+        <tbody class="background">
+            <tr ng-repeat="record in BackgroundVo.recordVoList|filter:search" ng-class="{'online':record.onLine}">
+                <td ng-bind="record.workerId"></td>
+                <td ng-bind="record.projectName"></td>
+                <td ng-bind="record.succNum"></td>
+                <td ng-bind="record.uploadTime|date:'yyyy-MM-dd HH:mm:ss'"></td>
+            </tr>
         </tbody>
         <tfoot>
-            <td colspan="4"><span>15分钟参与人数: {{BackgroundVo.activeParticipate}}</span></td>
+            <tr>
+                <td colspan="4">15分钟参与人数: <span ng-bind="BackgroundVo.activeParticipate"></span></td>
+            </tr>
         </tfoot>
     </table>
 

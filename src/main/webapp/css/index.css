@@ -1,0 +1,11 @@
+*{ margin:0 auto; padding:0 auto; text-align:center;}
+.notice{font-size:20px;color: brown}
+.online{
+    background: yellowgreen ;
+}
+.selected{
+    background-color: LightGrey ;
+}
+thead { border:1px solid #aaa}
+.background{ border: hidden;font-size: 10px;}
+tfoot { border:1px solid #aaa}
