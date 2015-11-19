@@ -1,5 +1,5 @@
 var backgroundApp = angular.module('backgroundApp', ['ui.bootstrap', 'wiki.common']);
-backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$timeout","$q", function ($scope, Path, $http, $timeout,$q, $location, voteService) {
+backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$timeout","$q", function ($scope, Path, $http, $timeout,$q) {
     $scope.projectName = getQueryString(window.location.search, "projectName");
     $scope.historyBackground = "";
     function getQueryString(queryString, name) {
@@ -16,18 +16,20 @@ backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$t
         if (data) {
             $scope.BackgroundVo = data;
             if ($scope.BackgroundVo.backgroundNo > 101) {
+                var historyBackground="";
                 for (var i = 101; i < $scope.BackgroundVo.backgroundNo; i++) {
-                    $scope.historyBackground = $scope.historyBackground + " <a href=\'background-history.html?projectName=" + $scope.projectName + "&backgroundNo=" + i + "\'>" + i + "</a>"
+                    historyBackground = historyBackground + " <a href=\'background-history.html?projectName=" + $scope.projectName + "&backgroundNo=" + i + "\'>" + i + "</a>"
                 }
-            }else{
-                $scope.countLoad=20;
+                $("#background").append(historyBackground)
             }
             $timeout(function(){
                 $scope.search={workerId:""}
             },100)
+        }else{
+            alert("查询后台信息失败！");
         }
     }).error(function () {
-        alert("查询后台信息失败！");
+        alert("服务器异常！");
     });
 
     $scope.$watch("search.workerId", function (newvalue, oldvalue) {
@@ -58,25 +60,6 @@ backgroundApp.controller("BackgroundController", ["$scope", "Path", "$http", "$t
         $scope.BackgroundVo.activeParticipate = activeParticipate;
         $scope.BackgroundVo.finishNum = finishNum;
     };
-    $scope.countLoad=0;
-    $scope.checkLoadOver=function(element){
-        if($scope.historyBackground||$scope.countLoad==20){
-            element.append($scope.historyBackground)
-        }else{
-            $timeout(function(){
-                $scope.countLoad++;
-                $scope.checkLoadOver(element)
-            },1000);
-        }
-    }
 }]);
-backgroundApp.directive('historyBackground', function ($q) {
-    return {
-        restrict: 'E',
-        template: '<span class=\"app-content\">历史后台:</span>',
-        link: function (scope, element, attrs) {
-            scope.checkLoadOver(element);
-        }
-    }
-});
+
 

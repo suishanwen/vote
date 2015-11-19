@@ -1,7 +1,7 @@
-var AdminManageController=function($scope,Path,$http,$timeout,$location,voteService) {
+var AdminManageController=function($scope,Path,$http,$timeout,$location) {
     if(!sessionStorage.loginUser||sessionStorage.loginUserState=="1"){
         $location.path('/admin-login');
-    };
+    }
     var getAdminList=function(){
         var url = Path.getUri("api/admin");
         $http.get(url).success(function (data) {

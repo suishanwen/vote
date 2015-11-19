@@ -1,4 +1,4 @@
-var ProjectListController=function($scope,Path,$http,$timeout,$location,voteService) {
+var ProjectListController=function($scope,Path,$http,$timeout,$location) {
 
     var getProjectList=function(){
         var url = Path.getUri("api/project/");
