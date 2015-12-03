@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html ng-app="adminApp">
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>管理员</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="../css/index.css"/>
-</head>
-<body id="loginUser" ng-controller="AdminManageController">
+
+<div id="loginUser" ng-controller="AdminManageController">
     <div class="control-panel" align="center">
         <button class="btn btn-default" ng-click="addNewAdmin()">新增</button>
         <button class="btn btn-primary" ng-click="editAdminFun()">编辑</button>
@@ -55,10 +48,4 @@
             <button class="btn btn-primary" ng-click="editAdmin()">确定</button>
         </div>
     </div>
-    <script src="../assets/js/angular.js"></script>
-    <script src="../assets/js/wiki-common.js"></script>
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/ui-bootstrap-tpls.js"></script>
-    <script src="../js/admin-manage-controller.js"></script>
-</body>
-</html>
+</div>

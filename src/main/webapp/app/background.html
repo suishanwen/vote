@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>实时后台</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../styles/index.css"/>
 </head>
-<body  ng-controller="BackgroundController">
-<div class="notice"><span ng-bind="BackgroundVo.notice"></span></div>
-<div>
+<body ng-controller="BackgroundController">
+<div class="background-index">
+    <div class="notice"><span ng-bind="BackgroundVo.notice"></span></div>
+    <div>
         项目名:<span ng-bind="projectName"></span>
         总需求量:<span ng-bind="BackgroundVo.totalRequirement"></span>
         已完成量:<span ng-bind="BackgroundVo.finishNum"></span>
@@ -17,38 +18,38 @@
         当前后台:<span ng-bind="BackgroundVo.backgroundNo"></span>
         历史后台:<span id="background"></span>
         <input type="text" placeholder="查询工号" ng-model="search.workerId">
-</div>
-<div>
-    <table class="table">
-        <thead>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
             <tr>
                 <td>工号</td>
                 <td>项目名</td>
                 <td>成功数量</td>
                 <td>更新时间</td>
             </tr>
-        </thead>
-        <tbody class="background">
+            </thead>
+            <tbody class="background">
             <tr ng-repeat="record in BackgroundVo.recordVoList|filter:search" ng-class="{'online':record.onLine}">
                 <td ng-bind="record.workerId"></td>
                 <td ng-bind="record.projectName"></td>
                 <td ng-bind="record.succNum"></td>
                 <td ng-bind="record.uploadTime|date:'yyyy-MM-dd HH:mm:ss'"></td>
             </tr>
-        </tbody>
-        <tfoot>
+            </tbody>
+            <tfoot>
             <tr>
                 <td colspan="4">15分钟参与人数: <span ng-bind="BackgroundVo.activeParticipate"></span></td>
             </tr>
-        </tfoot>
-    </table>
+            </tfoot>
+        </table>
 
+    </div>
 </div>
-
 <script src="../assets/js/angular.js"></script>
 <script src="../assets/js/wiki-common.js"></script>
 <script src="../assets/js/jquery.js"></script>
 <script src="../assets/js/ui-bootstrap-tpls.js"></script>
-<script src="../js/background-controller.js"></script>
+<script src="../javascript/background-controller.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@ package com.vote;
 import com.heren.i0.config.Configuration;
 import com.heren.i0.config.util.LogLevel;
 import com.heren.i0.container.grizzly.EmbeddedGrizzly;
-import com.heren.i0.container.grizzly.WebSocket;
 import com.heren.i0.core.Application;
 import com.heren.i0.core.ApplicationModule;
 import com.heren.i0.core.GuiceModule;
@@ -33,8 +32,8 @@ import static com.heren.i0.jpa.DatabaseConfiguration.database;
         {
                 @EmbeddedGrizzly.Asset(uri = "/app", resource = "app"),
                 @EmbeddedGrizzly.Asset(uri = "/assets", resource = "assets"),
-                @EmbeddedGrizzly.Asset(uri = "/css", resource = "css"),
-                @EmbeddedGrizzly.Asset(uri = "/js", resource = "js")
+                @EmbeddedGrizzly.Asset(uri = "/styles", resource = "styles"),
+                @EmbeddedGrizzly.Asset(uri = "/javascript", resource = "javascript")
         }/*,
         mimeExtensions = {@EmbeddedGrizzly.MimeExtension(extension = "eot", mime = "application/vnd.ms-fontobject"),
                 @EmbeddedGrizzly.MimeExtension(extension = "ttf", mime = "application/x-font-opentype"),

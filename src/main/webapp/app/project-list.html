@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html ng-app="projectApp">
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>项目列表</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css"/>
-    <link rel="stylesheet" href="../css/index.css"/>
-</head>
-<body id="loginUser" ng-controller="ProjectListController">
+<div id="loginUser" ng-controller="ProjectListController">
     <div class="control-panel" align="center" ng-show="loginUserState!='1'">
         <button class="btn btn-default" ng-click="addNewProject()">新增</button>
         <button class="btn btn-primary" ng-click="editProjectFun()">编辑</button>
@@ -87,11 +79,4 @@
             <button class="btn btn-primary" ng-click="editProject()">确定</button>
         </div>
     </div>
-
-    <script src="../assets/js/angular.js"></script>
-    <script src="../assets/js/wiki-common.js"></script>
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/ui-bootstrap-tpls.js"></script>
-    <script src="../js/project-list-controller.js"></script>
-</body>
-</html>
+</div>
