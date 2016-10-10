@@ -1,5 +1,5 @@
 # vote
-voteBackgroundManageSystem By Intellij Idea <br><br>
+voteBackgroundManageSystem <br><br>
 
 http://42.96.207.122:8888/vote/app/index.html <br><br>
 
